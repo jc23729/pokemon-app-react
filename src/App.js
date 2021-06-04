@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PokemonList from "./PokemonList"
 
 function App() {
   //first variable is our list of pokemon using on screen, current state, current data
