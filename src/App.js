@@ -5,6 +5,7 @@ function App() {
   //first variable is our list of pokemon using on screen, current state, current data
   //method we can use to update our state
   // so basically it puts "bulbasaur", "charmander" into our pokemon variable on the left
+  //were gonna make usestate dynamic using library api axios 
   const [pokemon, setPokemon] = useState(["bulbasaur", "charmander"]);
   return (
     <PokemonList> pokemon={pokemon}</PokemonList>
