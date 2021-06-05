@@ -2,11 +2,11 @@ import React from "react";
 //so here we are destructring pokemon so its basicall props.pokemon
 export default function PokemonList({ pokemon }) {
     return (
-        //loop over the pokemon with map
-        <div>
-            {pokemon.map(p => (
-                <div key={p}>{p}</div>
-            ))}
-        </div>
-    )
+      //loop over the pokemon with map, every time you loop you have to have a key to your top level element
+      <div>
+        {pokemon.map((p) => (
+          <div key={p}>{p}</div>
+        ))}
+      </div>
+    );
 }
