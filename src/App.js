@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PokemonList from "./PokemonList";
+import axios from "axios";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
 
   //were gonna make usestate dynamic using library api axios
 
-  axios.get(" https://pokeapi.co/api/v2/pokemon/ditto").then((res) => {
+  axios.get(" https://pokeapi.co/api/v2/pokemon").then((res) => {
     //this will be our actual results for the pokemon
     setPokemon(res.data.results.map((p) => p.name));
   });
 
-  return <PokemonList pokemon={pokemon} />
+  return <PokemonList pokemon={pokemon} />;
 }
 
 export default App;

@@ -1,4 +1,7 @@
 import React from "react"
+import ReactDOM from "react-dom";
+import App from "./App";
+
 //so here we are destructring pokemon so its basicall props.pokemon
 export default function PokemonList({ pokemon }) {
     return (
