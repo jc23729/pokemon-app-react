@@ -6,6 +6,11 @@ function App() {
   //method we can use to update our state
   // so basically it puts "bulbasaur", "charmander" into our pokemon variable on the left
   //were gonna make usestate dynamic using library api axios 
+
+  axios.get(" https://pokeapi.co/api/v2/pokemon/ditto").then(res => {
+    //this will be our actual results for the pokemon 
+    setPokemon(res.data.results.map(p => p.name))
+  });
   const [pokemon, setPokemon] = useState(["bulbasaur", "charmander"]);
   return (
     <PokemonList> pokemon={pokemon}</PokemonList>
